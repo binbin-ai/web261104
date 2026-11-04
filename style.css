@@ -1,0 +1,191 @@
+:root { 
+  --bg: #141e30; 
+  --surface: #1f2b44; 
+  --text: #f5f5f7; 
+  --accent: #4da3ff; 
+  --warn: #ff5a5f; 
+  --font-title: "Black Han Sans", sans-serif; 
+  --font-body: "Noto Sans KR", sans-serif; 
+  --gap: 20px; 
+}
+
+
+body { 
+    background: var(--bg); 
+    min-height: 100vh; 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 16px; 
+    font-family: var(--font-body); 
+    color: var(--text);
+}
+
+main, .top, .hero, footer { 
+    max-width: 1100px; 
+    margin: 0 auto 24px; 
+}
+
+.top { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+nav ul { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+nav a { 
+    color: var(--text); 
+    text-decoration: none; 
+}
+
+.hero { 
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://image.tmdb.org/t/p/w1280/mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    min-height: 40vh; 
+    padding: 24px; 
+    box-sizing: border-box; 
+    color: var(--text);
+    border-radius: 12px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+
+.board { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: var(--gap);
+}
+
+.card { 
+    position: relative; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+    border-radius: 12px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+    background: var(--surface);
+    color: var(--text);
+}
+
+.card:hover { 
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 32px rgba(255,193,7,0.6);
+}
+
+.info { 
+    padding: 12px; 
+}
+
+.poster { 
+    width: 100%; 
+    display: block; 
+    aspect-ratio: 2 / 3; 
+    object-fit: cover; 
+}
+
+.badge { 
+    position: absolute; 
+    animation: pulse 2s infinite; 
+    top: 12px; 
+    right: 12px; 
+    background: var(--warn);
+    color: var(--text);
+    padding: 4px 10px; 
+    border-radius: 999px; 
+    font-weight: bold; 
+}
+
+.rank {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--accent);
+    color: var(--bg);
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+.change.up::before { content: "▲ "; }
+.change.down::before { content: "▼ "; }
+.change.new::before { content: "NEW "; }
+
+.change.up, .change.new { color: var(--warn); }
+.change.down { color: var(--accent); }
+
+.card.no-poster .poster-fallback {
+    aspect-ratio: 2 / 3;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 5rem; font-family: var(--font-title);
+    background: linear-gradient(135deg, var(--accent), var(--surface));
+}
+
+h1, footer { 
+    color: var(--text);
+}
+
+.detail-page {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("https://image.tmdb.org/t/p/w1280/mMtUybQ6hL24FXo0F3Z4j2KG7kZ.jpg");
+    background-size: cover; 
+    min-height: 100vh;
+}
+
+.detail { 
+    display: grid; 
+    grid-template-columns: 1fr;
+    gap: var(--gap); 
+}
+
+.detail img { 
+    width: 100%; 
+}
+
+.skeleton { 
+  display: none; min-height: 360px; border-radius: 12px; 
+  background: linear-gradient(90deg, var(--surface) 25%, var(--bg) 37%, var(--surface) 63%); 
+  background-size: 400% 100%; 
+  animation: shimmer 1.4s ease-in-out infinite; 
+} 
+body.is-loading .skeleton { display: block; } 
+body.is-loading .card { display: none; }
+
+@keyframes pulse { 
+    0%, 100% { transform: scale(1); } 
+    50% { transform: scale(1.15); } 
+}
+
+@media (min-width: 600px) { 
+    nav ul { 
+        flex-direction: row; 
+        gap: var(--gap);
+    }
+    .detail { 
+        grid-template-columns: 1fr 2fr;
+    }
+    .detail img { 
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) { 
+    .hero { 
+        min-height: 60vh; 
+    } 
+    .hero h2 { 
+        font-size: 3rem; 
+    } 
+}
+
+
+@keyframes shimmer { 
+  from { background-position: 100% 50%; } 
+  to { background-position: 0 50%; } 
+}

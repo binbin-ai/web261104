@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 영화 보드</title>
+    <script src="./script.js"></script>
+    <!-- 구글 폰트 <link> 두세 줄을 여기에 붙여 넣기 -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <header class="top">
+        <h1>내 영화 보드</h1>
+        <nav>
+            <ul>
+                <li><a href="#mine">내 인생 영화</a></li>
+                <li><a href="#boxoffice">박스오피스</a></li>
+                <li><a href="detail.html">상세</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <h2>요즘 내가 고른 영화 다섯 편</h2>
+        <p>포스터 위에 마우스를 올려 보세요.</p>
+    </section>
+
+
+    <main>
+        <section id="mine">
+            <h2>내 인생 영화 5편</h2>
+            <div class="board">
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+
+                <!-- 카드 1 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/2DJCufz3Oa703PbLjNX1pM6MCG2.jpg"
+                        alt="너의 이름은 포스터">
+                    <span class="badge">8.492</span>
+                    <div class="info">
+                        <h3>너의 이름은</h3>
+                        <p class="year">2016</p>
+                        <p class="overview">한 시골 소녀와 도시 소년이 경험하게 되는 신비한 이야기</p>
+                    </div>
+                </article>
+
+                <!-- 카드 2 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/z7ilT5rNN9kDo8JZmgyhM6ej2xv.jpg"
+                        alt="어벤져스: 엔드게임 포스터">
+                    <span class="badge">8.2</span>
+                    <div class="info">
+                        <h3>어벤져스: 엔드게임</h3>
+                        <p class="year">2019</p>
+                        <p class="overview">지구를 구하기위한 모든 히어로의 고군분투 이야기</p>
+                    </div>
+                </article>
+
+                <!-- 카드 3 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/gDN2NWtHbs8ZWEBQM8Dh5OVXdb4.jpg"
+                        alt="인터스텔라 포스터">
+                    <span class="badge">8.492</span>
+                    <div class="info">
+                        <h3>인터스텔라</h3>
+                        <p class="year">2014</p>
+                        <p class="overview">딸을 위해 우주를 횡단하는 아버지의 이야기</p>
+                    </div>
+                </article>
+
+                <!-- 카드 4 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/fxBxoXFAYKWde6lKzXxSusn18Av.jpg"
+                        alt="매트릭스 포스터">
+                    <span class="badge">8.261</span>
+                    <div class="info">
+                        <h3>매트릭스</h3>
+                        <p class="year">1999</p>
+                        <p class="overview">우리는 사실 시물레이션이다..?</p>
+                    </div>
+                </article>
+
+                <!-- 카드 5 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/AJ3Lzeh6EvdJcf3dHxi7b0x0OY.jpg"
+                        alt="파파로티 포스터">
+                    <span class="badge">7</span>
+                    <div class="info">
+                        <h3>파파로티</h3>
+                        <p class="year">2013</p>
+                        <p class="overview">구제불능 건달 고등학생이 성악가가되까지의 이야기</p>
+                    </div>
+                </article>
+
+
+            </div>
+        </section>
+
+        <section id="boxoffice">
+            <h2>일별 박스오피스 TOP 5</h2>
+            <p class="basis">KOBIS 기준일 2026-10-25</p>
+            <div class="board">
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                <div class="skeleton"></div>
+                
+                <!-- 카드 1 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/5TMyytCI5Pfc9c1eNsljiCdiB05.jpg"
+                        alt="극장판 치이카와: 인어 섬의 비밀 포스터">
+                    <span class="rank">1</span>
+                    <span class="badge">7.4</span>
+                    <div class="info">
+                        <h3>극장판 치이카와: 인어 섬의 비밀</h3>
+                        <p class="year">개봉 2026-09-30</p>
+                        <p class="audience">누적 2,248,126명</p>
+                        <p class="change">-</p>
+                    </div>
+                </article>
+
+                <!-- 카드 2 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/c55ijsOdntj6P25vDwHLdgsBpmV.jpg"
+                        alt="암살자(들) 포스터">
+                    <span class="rank">2</span>
+                    <span class="badge">7.2</span>
+                    <div class="info">
+                        <h3>암살자(들)</h3>
+                        <p class="year">개봉 2026-09-23</p>
+                        <p class="audience">누적 3,374,510명</p>
+                        <p class="change">-</p>
+                    </div>
+                </article>
+
+                <!-- 카드 3 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/wkm9BQLok7U2KihcCspCa663Qse.jpg"
+                        alt="실낙원 포스터">
+                    <span class="rank">3</span>
+                    <span class="badge">8</span>
+                    <div class="info">
+                        <h3>실낙원</h3>
+                        <p class="year">개봉 2026-10-21</p>
+                        <p class="audience">누적 104,874명</p>
+                        <p class="change">-</p>
+                    </div>
+                </article>
+
+                <!-- 카드 4 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/ueigb5zra1tj6FTK9yhh2P33P9B.jpg"
+                        alt="타짜: 벨제붑의 노래 포스터">
+                    <span class="rank">4</span>
+                    <span class="badge">7</span>
+                    <div class="info">
+                        <h3>타짜: 벨제붑의 노래</h3>
+                        <p class="year">개봉 2026-09-23</p>
+                        <p class="audience">누적 1,999,477명</p>
+                        <p class="change up">1</p>
+                    </div>
+                </article>
+
+                <!-- 카드 5 -->
+                <article class="card">
+                    <img class="poster" src="https://image.tmdb.org/t/p/w342/LSGpoSAlitss0KOvVakkeUToZo.jpg"
+                        alt="클레이페이스 포스터">
+                    <span class="rank">5</span>
+                    <span class="badge">7.6</span>
+                    <div class="info">
+                        <h3>클레이페이스</h3>
+                        <p class="year">개봉 2026-10-21</p>
+                        <p class="audience">누적 77,153명</p>
+                        <p class="change down">1</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <section id="about">
+        <h2>이 보드에 대하여</h2>
+        <p>만든 사람 : 박현빈</p>
+        <p>영화 선정 기준 : 박현빈 뇌리에 박힌 영화들</p>
+        <p>포스터와 영화 정보는 TMDB 검색 결과를 그대로 옮겼습니다.</p>
+    </section>
+
+    <footer>
+        <p>이 사이트는 TMDB API를 사용하지만 TMDB의 보증이나 인증을 받지 않았습니다.
+            This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+        <p>포스터와 영화 정보: TMDB (https://www.themoviedb.org)</p>
+        <p>박스오피스 데이터: 영화진흥위원회 영화관입장권통합전산망(KOBIS), 기준일 2026-10-25</p>
+    </footer>
+
+</body>
+
+
+</html>
